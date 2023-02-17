@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 class Counter extends Component {
 
     state = {
-        count: 0,
+        value: this.props.value,
     };
 
     
     handleIncrement = () => { 
-        this.setState({count: this.state.count + 1})
+        this.setState({value: this.state.value + 1})
        
     }
     handleDecrement = () => { 
-        this.setState({count: this.state.count - 1})
+        this.setState({value: this.state.value - 1})
        
     }
  
@@ -23,10 +23,9 @@ class Counter extends Component {
     
     */
     render() { 
-
         return (
             <div>
-                <h1>{this.state.count}</h1>
+                <h1>{this.state.value}</h1>
                 <button  
                     className='btn btn-secondary btn-sm btn-warning' 
                     onClick={this.handleIncrement}>
